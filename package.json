@@ -1,0 +1,17 @@
+{
+  "name": "mips-snippets",
+  "version": "1.0.0",
+  "description": "Snippet For Mips Assembly Language",
+  "keywords": [
+  ],
+  "activationCommands": {
+    "atom-workspace": "mips-snippets:toggle"
+  },
+  "repository": "https://github.com/atom/mips-snippets",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+  }
+}

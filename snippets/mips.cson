@@ -1,0 +1,720 @@
+############################################
+#
+#   Author: Cobe Greene
+#   Date Created: 10 / 20 / 2017
+#   Date Finish: 10 / 25 / 2017
+#
+#   Overview: Snippet For Mips Assembly Language
+#
+####
+'.source.mips':
+    # Variables
+    'Variable':
+        'prefix': 'var'
+        'body': '${1:"name"}: .${2:"type"} ${3:"value"}'
+        'description': 'Allocate Memory For A Variable'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+
+    # Adding
+    'Add':
+        'prefix': 'add'
+        'body': 'add ${1:"dest = "}, ${2:"source + "}, ${3:"source"}'
+        'description': 'Adds 32-bit integers. If overflow occurs, then trap'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Add Unsigned':
+        'prefix': 'addu'
+        'body': 'addu ${1:"dest = "}, ${2:"source + "}, ${3:"source"}'
+        'description': 'To add 32-bit intgers'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Add Immediate':
+        'prefix': 'addi'
+        'body': 'addi ${1:"dest = "}, ${2:"source + "}, ${3:"value"}'
+        'description': 'To add a constant to a 32-bit integer. If overflow occurs, then trap'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Add Imediate Unsigned':
+        'prefix': 'addiu'
+        'body': 'addiu ${1:"dest = "}, ${2:"source + "}, ${3:"value"}'
+        'description': 'To add a constant to a 32-bit integer'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+
+    # Count Leading Binary
+    'Count Leading Ones':
+        'prefix': 'clo'
+        'body': 'clo ${1:"dest"}, ${2:"source"}'
+        'description': 'To count the number of leading ones in a word'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Count Leading Zeros':
+        'prefix': 'clz'
+        'body': '${1:"dest"}, ${2:"souurce"}'
+        'description': 'To count the number of leading zeros in a word'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+
+    # Subtract
+    'Subtract':
+        'prefix': 'sub'
+        'body': 'sub ${1:"dest = "}, ${2:"source - "}, ${3:"source"}'
+        'description': 'To subtract 32-bit integers, if overflow then trap'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Subtract Unsigned':
+        'prefix': 'subu'
+        'body': 'subu ${1:"dest = "}, ${2:"source - "}, ${3:"source"}'
+        'description': 'To subtract 32-bit integers'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+
+    # Multiply
+    'Multiply':
+        'prefix': 'mul'
+        'body': 'mul ${1:"dest = "}, ${2:"source * "}, ${3:"source"}'
+        'description': 'To multiply two words'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Multiply To Hi, Lo':
+        'prefix': 'mult'
+        'body': 'mult ${1:"source * "}, ${2:"source"}'
+        'description': 'To multiply two words and stored the value into Hi and Lo'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Multiply Unsigned To Hi, Lo':
+        'prefix': 'multu'
+        'body': 'multu ${1:"source * "}, ${2:"source"}'
+        'description': 'To multiply 32-bit unsigned integers'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+
+    # Dividing
+    'Divide To Hi, Lo':
+        'prefix': 'div'
+        'body': 'div ${1:"source /"}, ${2:"source"}'
+        'description': 'To divide a 32-bit signed integers. Quotient is placed into LO and Remainder is placed into Hi'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Divide Unsigned To Hi, Lo':
+        'prefix': 'divu'
+        'body': 'add ${1:"source /"}, ${2:"source"}'
+        'description': 'To divide a 32-bit unsigned integers. Quotient is placed into LO and Remainder is placed into Hi'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+
+    # Multiple Operations
+    'Multiply And Add Word To Hi, Lo':
+        'prefix': 'madd'
+        'body': 'madd ${1:"source * "}, ${2:"source"}'
+        'description': 'To multiply two words and add the result to Hi, Lo'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Multiply And Add Unsigned To Hi, Lo':
+        'prefix': 'maddu'
+        'body': 'maddu ${1:"source * "}, ${2:"source"}'
+        'description': 'To multiply two unsigned words and add the result to Hi, Lo'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Multiply And Subtract Word To Hi, Lo':
+        'prefix': 'msub'
+        'body': 'msub ${1:"source * "}, ${2:"source"}'
+        'description': 'To multiply two words and subtract the results from Hi, Lo'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Multiply And Subtract Unsigned To Hi, Lo':
+        'prefix': 'msubu'
+        'body': 'msubu ${1:"source * "}, ${2:"source"}'
+        'description': 'To multiply two unsigned words and subtract the results from Hi, Lo'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+
+    # Jump
+    'Jump':
+        'prefix': 'j'
+        'body': 'j ${1:"target"}'
+        'description': 'To branch to desire location'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Jump And Link':
+        'prefix': 'jal'
+        'body': 'jal ${1:"target"}'
+        'description': 'To go to desire location, and pass the return address into $ra'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Jump And Link Register':
+        'prefix': 'jalr'
+        'body': 'jalr ${1:"return dest"}, ${2:"target"}'
+        'description': 'To go to desire location, and pass the return address into $r'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Jump Register':
+        'prefix': 'jr'
+        'body': 'jr ${1:"target"}'
+        'description': 'To go to desire location in the register'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+
+    # Set On
+    'Set On Less Than':
+        'prefix': 'slt'
+        'body': 'slt ${1:"dest == 1/0"}, ${2:"source < "}, ${3:"source"}'
+        'description': 'To record the result of a less-than comparision'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Set On Less Than Immediate':
+        'prefix': 'slti'
+        'body': 'slti ${1:"dest == 1/0"}, ${2:"source < "}, ${3:"value"}'
+        'description': 'To record the result of a less-than comparision with a constant'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Set On Less Than Immediate Unsigned':
+        'prefix': 'sltiu'
+        'body': 'sltiu ${1:"dest == 1/0"}, ${2:"source < "}, ${3:"value"}'
+        'description': 'To record the result of an unsigned less-than comparision with a constant'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Set On Less Than Unsigned':
+        'prefix': 'sltu'
+        'body': 'sltu ${1:"dest == 1/0"}, ${2:"source < "}, ${3:"source"}'
+        'description': 'To record the result of an unsigned less-than comparision'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+
+    # Bitwise Operations And Arithmetic Operration
+    'Or':
+        'prefix': 'or'
+        'body': 'or ${1:"dest = "}, ${2:"source OR "}, ${3:"source"}'
+        'description': 'To do a bitwise logical OR'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Or Immediate':
+        'prefix': 'ori'
+        'body': 'ori ${1:"dest = "}, ${2:"source OR "}, ${3:"value"}'
+        'description': 'To do a bitwise logical OR with a constant'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Not Or':
+        'prefix': 'nor'
+        'body': 'nor ${1:"dest = "}, ${2:"source NOR "}, ${3:"source"}'
+        'description': 'To do a bitwise logical NOT OR'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Exclusive Or':
+        'prefix': 'xor'
+        'body': 'xor ${1:"dest = "}, ${2:"source XOR"}, ${3:"source"}'
+        'description': 'To do a bitwise logical exclusive or'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Exclusive Or Immediate':
+        'prefix': 'xori'
+        'body': 'xori ${1:"dest = "}, ${2:"source XOR"}, ${3:"value"}'
+        'description': 'To do a bitwise logical  exclusive or with a constant'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'And':
+        'prefix': 'and'
+        'body': 'and ${1:"dest = "}, ${2:"source AND "}, ${3:"source"}'
+        'description': 'To do a bitwise logical AND'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'And Immediate':
+        'prefix': 'andi'
+        'body': 'andi ${1:"dest = "}, ${2:"source AND "}, ${3:"value"}'
+        'description': 'To do a bitwise logical AND with a constant'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Shift Left Logical':
+        'prefix': 'sll'
+        'body': 'sll ${1:"dest = "}, ${2:"source << "}, ${3:"value"}'
+        'description': 'To left-shift a word by a fixed number of bits'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Shift Left Variable':
+        'prefix': 'sllv'
+        'body': 'sllv ${1:"dest = "}, ${2:"source << "}, ${3:"source"}'
+        'description': 'To left-shift a word by a variable number of bits'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Shift Right Logical':
+        'prefix': 'srl'
+        'body': 'srl ${1:"dest = "}, ${2:"source >> "}, ${3:"value"}'
+        'description': 'To execute a logical right-shift of a word by a fixed number of bits'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Shift Right Logical Variable':
+        'prefix': 'srlv'
+        'body': 'srlv ${1:"dest = "}, ${2:"source >> "}, ${3:"source"}'
+        'description': 'To execute a logical right-shift of a word by a fixed number of bits'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Shift Word Right Arithmetic':
+        'prefix': 'sra'
+        'body': 'sra ${1:"dest = "}, ${2:"source >> "}, ${3:"source"}'
+        'description': 'To execute an arithmetic right-shift of a word by a fixed number of bits'
+        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Shift Word Right Arithmetic Variable':
+        'prefix': 'srav'
+        'body': 'srav ${1:"dest = "}, ${2:"source >> "}, ${3:"source"}'
+        'description': 'To execute an arithmetic right-shfit of a word by a variable number of bits'
+        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+
+
+    # Loading
+    'Load Byte':
+        'prefix': 'lb'
+        'body': 'lb ${1:"dest ="}, ${2:"byte"}'
+        'description': 'To load a byte from memory'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Load Byte Unsigned':
+        'prefix': 'lbu'
+        'body': 'lb ${1:"dest ="}, ${2:"byte"}'
+        'description': 'To load a byte from memory as an unsigned value'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Load Halfword':
+        'prefix': 'lh'
+        'body': 'lh ${1:"dest = "}, ${2:"halfword"}'
+        'description': 'To load a halfbyte from memory'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Load Halfword Unsigned':
+        'prefix': 'lhu'
+        'body': 'lhu ${1:"dest = "}, ${2:"halfword"}'
+        'description': 'To load a halfbyte from memory as an unsigned value'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Load Immediate':
+        'prefix': 'li'
+        'body': 'li ${1:"dest = "}, ${2:"value"}'
+        'description': ''
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Load Word':
+        'prefix': 'lw'
+        'body': 'lw ${1:"dest = "}, ${2:"source"}'
+        'description': 'To load word from memory'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Load Address':
+        'prefix': 'la'
+        'body': 'la ${1:"dest = "}, ${2:"source"}'
+        'description': ''
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Load Linked Word':
+        'prefix': 'll'
+        'body': 'll ${1:"dest = "}, ${2:"source"}'
+        'description': 'To load a word from memory for an atomic read-modify-write'
+        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Load Word Right':
+        'prefix': 'lwr'
+        'body': 'lwr ${1:"dest = "}, ${2:"source"}'
+        'description': 'To load the least significant part of a word as a signed value from an unaligned memory address'
+        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Load Word Left':
+        'prefix': 'lwl'
+        'body': 'lwl ${1:"dest = "}, ${2:"source"}'
+        'description': 'To load the most significant part of a word as a signed value from an unaligned memory address'
+        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Load Upper Immediate':
+        'prefix': 'lui'
+        'body': 'lui ${1:"dest = "}, ${2:"value"}'
+        'description': 'To load a constant into the upper half of the word'
+        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+
+
+    # Store
+    'Store Byte':
+        'prefix': 'sb'
+        'body': 'sb ${1:"source"}, ${2:" = dest"}'
+        'description': 'To store a byte from memory'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Store Halfword':
+        'prefix': 'sh'
+        'body': 'sh ${1:"source"}, ${2:" = dest"}'
+        'description': 'To store a halfword from memory'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Store':
+        'prefix': 'sw'
+        'body': 'sw ${1:"source"}, ${2:" = dest"}'
+        'description': 'To store a word into memory'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Store Word Right':
+        'prefix': 'swr'
+        'body': 'swr ${1:"source "}, ${2:" = dest"}'
+        'description': 'To store the least-significant part of a word to an unaligned memory address'
+        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Store Conditional Word':
+        'prefix': 'sc'
+        'body': 'sc ${1:"source "}, ${2:" = dest"}'
+        'description': 'To store a word to memory to complete an atomic read-modify-write'
+        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Store Word Left':
+        'prefix': 'swl'
+        'body': 'swl ${1:"source"}, ${2:" = dest"}'
+        'description': 'To store the most-significant part of a word to an unaligned memory address'
+        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+
+
+
+    # Move
+    'Move':
+        'prefix': 'move'
+        'body': 'move ${1:"dest = "}, ${2:"source"}'
+        'description': ''
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Move From Hi Register':
+        'prefix': 'mfhi'
+        'body': 'mfhi ${1:"dest"}'
+        'description': 'To copy the special purpose Hi register to register'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Move From Lo Register':
+        'prefix': 'mflo'
+        'body': 'mflo ${1:"dest"}'
+        'description': 'To copy the special purpose Lo register to register'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Move To Hi Register':
+        'prefix': 'mthi'
+        'body': 'mthi ${1:"source"}'
+        'description': 'To copy from the register to the special purpose register Hi'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Move To Lo Register':
+        'prefix': 'mtlo'
+        'body': 'mtlo ${1:"source"}'
+        'description': 'To copy from the register to the special purpose register Lo'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Move Conditional On Zero':
+        'prefix': 'movz'
+        'body': 'movz ${1:"dest = "}, ${2:"source"}, ${3:"source == 0"}'
+        'description': 'To move r2 to r1 if r3 equals 0'
+        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Move Conditional On Not Zero':
+        'prefix': 'movn'
+        'body': 'movn ${1:"dest = "}, ${2:"source"}, ${3:"source != 0"}'
+        'description': 'To move r2 to r1 if r3 doesn\'t equal 0'
+        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+
+    # Conditional
+    'Branch If Equal':
+        'prefix': 'beq'
+        'body': '''
+            beq ${1:"source == "}, ${2:"source"}, ${3:"move to label"}
+                nop
+                $4    '''
+        'description': 'To run comparision r1 == r2  then do a PC-relative conditional branch'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Branch If Equal To Zero':
+        'prefix': 'beqz'
+        'body': '''
+            beqz ${1:"source == 0"}, ${2:"move to label"}
+                nop
+                $3    '''
+        'description': ''
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Branch If Greater Than Or Equal To Zero':
+        'prefix': 'bgez'
+        'body': '''
+            bgez ${1:"source >= 0"}, ${2:"move to label"}
+                nop
+                $3    '''
+        'description': 'To run comparision r1 >= 0 then do a PC-relative conditional branch'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Branch If Greater Than Or Equal To Zero And Link':
+        'prefix': 'bgezal'
+        'body': '''
+            bgezal ${1:"source >= 0"}, ${2:"move to label"}
+                nop
+                $3    '''
+        'description': 'To run comparision rs >= 0 then do a PC-relative conditional branch, and pass the return address into $ra'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Branch If Greater Than Zero':
+        'prefix': 'bgtz'
+        'body': '''
+            bgtz ${1:"source > 0"}, ${2:"move to label"}
+                nop
+                $3    '''
+        'description': 'To run comparision rs > 0 then do a PC-relative conditional branch'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Branch If Less Than Or Equal To Zero':
+        'prefix': 'blez'
+        'body': '''
+            blez ${1:"source <= 0"}, ${2:"move to label"}
+                nop
+                $3    '''
+        'description': 'To run comparision rs <= 0 then do a PC-relative conditional branch'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Branch If Less Than Zero And Link':
+        'prefix': 'bltzal'
+        'body': '''
+            bltzal ${1:"source < 0"}, ${2:"move to label"}
+                nop
+                $3    '''
+        'description': 'To run comparision rs < 0 then do a PC-relative conditional branch, and pass the return address into $ra'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Branch If Greater Than Or Equal To Zero And Link':
+        'prefix': 'bgezal'
+        'body': '''
+            bgezal ${1:"source >= 0"}, ${2:"move to label"}
+                nop
+                $3    '''
+        'description': 'To run comparision rs >= 0 then do a PC-relative conditional branch, and pass the return address into $ra'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Branch If Less Than Zero':
+        'prefix': 'bltz'
+        'body': '''
+            bltz ${1:"source < 0"}, ${2:"move to label"}
+                nop
+                $3    '''
+        'description': 'To run comparision rs < 0 then do a PC-relative conditional branch'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Branch If Not Equal':
+        'prefix': 'bne'
+        'body': '''
+            bne ${1:"source != "}, ${2:"source"}, ${3:"move to label"}
+                nop
+                $4    '''
+        'description': 'To run comparision rs != 0 then do a PC-relative conditional branch'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Branch If Not Equal To Zero':
+        'prefix': 'bnez'
+        'body': '''
+            bnez ${1:"source != 0"}, ${2:"move to label"}
+                nop
+                $3 '''
+        'description': ''
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Branch':
+        'prefix': 'b'
+        'body': '''
+            b ${1:"target"}
+                nop
+            $2 '''
+        'description': 'To do an unconditional branch'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Branch If Less Than Zero Likely':
+        'prefix': 'bltzl'
+        'body': '''
+            bltzl ${1:"source < "}, ${2:"source"}, ${3:"move to label"}
+                nop
+                $4    '''
+        'description': 'To run comparision rs < 0 then do a PC-relative conditional branch; execute the delay slot only if the branch is taken'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Branch On Less Than Zero And Link Likely':
+        'prefix': 'bltzall'
+        'body': '''
+            bltzall ${1:"source < "}, ${2:"source"}, ${3:"move to label"}
+                nop
+                $4    '''
+        'description': 'To run comparision rs < 0 then do a PC-relative conditional branch; execute the delay slot only if the branch is taken, and pass the return address into $ra'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Branch On Less Than Or Equal To Zero Likely':
+        'prefix': 'blezl'
+        'body': '''
+            blezl ${1:"source <= 0 "}, ${2:"move to label"}
+                nop
+                $3    '''
+        'description': 'To run comparision rs <= 0 then do a PC-relative conditional branch; execute the delay slot only if the branch is taken'
+        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Branch On Greater Than Zero Likely':
+        'prefix': 'bgtzl'
+        'body': '''
+            bgtzl ${1:"source > 0"}, ${2:"move to label"}
+                nop
+                $3  '''
+        'description': 'To run comparision rs > 0 then do a PC-relative conditional branch; execute the delay slot only if the branch is taken.'
+        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Branch On Equal Likely':
+        'prefix': 'beql'
+        'body': '''
+            beql ${1:"source =="}, ${2:"source"}, ${3:"move to label"}
+                nop
+                $4  '''
+        'description': 'To run comparision r1 == r2 then do a PC-relative conditional branch; execute the delay slot only if the branch is taken'
+        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Branch On Greater Than Or Equal To Zero Likely':
+        'prefix': 'bgezl'
+        'body': '''
+            bgezal ${1:"source >= 0"}, ${2:"move to label"}
+                nop
+                $3  '''
+        'description': 'To run comparision rs >= 0 then do a PC-relative conditional branch; execute the delay slot only if the branch is taken, and pass the return address into $ra'
+        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Branch And Link':
+        'prefix': 'bal'
+        'body': '''
+            bal ${1:"move to label"}
+                nop
+            $2      '''
+        'description': 'To do an unconditional PC-relative procedure call, and pass the return address into $ra'
+        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Branch On Greater Than Or Equal To Zero And Link Likely':
+        'prefix': 'bgezall'
+        'body': '''
+            bgezall ${1:"source >= 0"}, ${2:"move to label"}
+                nop
+                $3  '''
+        'description': 'To run comparision rs >= 0 then do a PC-relative conditional branch; execute the delay slot only if the branch is taken, and pass the return address into $ra'
+        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Branch On Not Equal Likely':
+        'prefix': 'bnel'
+        'body': '''
+            bnel ${1:"source != "}, ${2:"source"}, ${3:"move to label"}
+                nop
+                $4  '''
+        'description': 'To run comparision rs != 0 then do a PC-relative conditional branch; execute the delay slot only if the branch is taken'
+        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+
+    # Trapping
+    'Trap If Equal':
+        'prefix': 'teq'
+        'body': 'teq ${1:"source == "}, ${2:"source"}'
+        'description': 'To run comparision r1 == r2, if true then trap'
+        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Trap If Equal Immediate':
+        'prefix': 'teqi'
+        'body': 'teqi ${1:"source == "}, ${2:"value"}'
+        'description': 'To run comparision r1 == constant, if true then trap'
+        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Trap If Greater Than Or Equal To Immediate':
+        'prefix': 'tgei'
+        'body': 'tgei ${1:"source >= "}, ${2:"value"}'
+        'description': 'To run comparision r1 >= constant, if true then trap'
+        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Trap If Less Than Unsigned':
+        'prefix': 'tltu'
+        'body': 'tltu ${1:"source < "}, ${2:"source"}'
+        'description': 'To run comparision r1 < r2, if true then trap'
+        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Trap If Greater Or Equal':
+        'prefix': 'tge'
+        'body': 'tge ${1:"source >="}, ${2:"source"}'
+        'description': 'To run comparision r1 >= r2, if true then trap'
+        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Trap If Less Than Immediate Unsigned':
+        'prefix': 'tltiu'
+        'body': 'tltiu ${1:"source < "}, ${2:"value"}'
+        'description': 'To run comparision r1 < constant, if true then trap'
+        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Trap If Not Equal':
+        'prefix': 'tne'
+        'body': 'tne ${1:"source != "}, ${2:"source"}'
+        'description': 'To run comparision r1 != r2, if true then trap'
+        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Trap If Not Equal Immediate':
+        'prefix': 'tnei'
+        'body': 'tnei ${1:"source != "}, ${2:"value"}'
+        'description': 'To run comparision r1 != constant, if true then trap'
+        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Trap If Greater Or Equal Unsigned':
+        'prefix': 'tgeu'
+        'body': 'tgeu ${1:"source >= "}, ${2:"source"}'
+        'description': 'To run comparision r1 >= r2, if true then trap'
+        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Trap If Less Than':
+        'prefix': 'tlt'
+        'body': 'tlt ${1:"source < "}, ${2:"source"}'
+        'description': 'To run comparision r1 < r2, if true then trap'
+        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Trap If Less Than Immediate':
+        'prefix': 'tlti'
+        'body': 'tlti ${1:"source < "}, ${2:"valu"}'
+        'description': 'To run comparision r1 < constant, if true then trap'
+        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Trap If Greater Or Equal Immediate Unsigned':
+        'prefix': 'tgeiu'
+        'body': 'tgeiu ${1:"source >="}, ${2:"source"}'
+        'description': 'To run comparision r1 >= constant, if true then trap'
+        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+
+    # Other Commands
+    'Negate':
+        'prefix': 'neg'
+        'body': '${1:"source ="}, ${2:"-1 * source"}'
+        'description': 'The value is negated, and place into a register'
+        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'No Operation':
+        'prefix': 'nop'
+        'body': 'nop'
+        'description': 'To perform no operation'
+        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Break':
+        'prefix': 'break'
+        'body': 'break'
+        'description': 'To cause a Breakpoint exeception'
+        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Debug Exeception Return':
+        'prefix': 'deret'
+        'body': 'deret'
+        'description': 'To return from a debug exeception'
+        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'System Call':
+        'prefix': 'syscall'
+        'body': 'syscall'
+        'description': 'To cause a system call'
+        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Exeception Return':
+        'prefix': 'eret'
+        'body': 'eret'
+        'description': 'To return from interrupt, exeception, or error trap'
+        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
