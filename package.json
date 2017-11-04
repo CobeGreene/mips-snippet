@@ -7,7 +7,7 @@
   "activationCommands": {
     "atom-workspace": "mips-snippets:toggle"
   },
-  "repository": "https://github.com/atom/mips-snippets",
+  "repository": "https://github.com/CobeGreene/mips-snippet",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
