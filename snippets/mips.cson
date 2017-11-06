@@ -550,7 +550,7 @@
                 nop
                 $3    '''
         'description': 'To run comparision rs <= 0 then do a PC-relative conditional branch; execute the delay slot only if the branch is taken'
-        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
         'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
     'Branch On Greater Than Zero Likely':
         'prefix': 'bgtzl'
@@ -559,7 +559,7 @@
                 nop
                 $3  '''
         'description': 'To run comparision rs > 0 then do a PC-relative conditional branch; execute the delay slot only if the branch is taken.'
-        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
         'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
     'Branch On Equal Likely':
         'prefix': 'beql'
@@ -568,7 +568,7 @@
                 nop
                 $4  '''
         'description': 'To run comparision r1 == r2 then do a PC-relative conditional branch; execute the delay slot only if the branch is taken'
-        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
         'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
     'Branch On Greater Than Or Equal To Zero Likely':
         'prefix': 'bgezl'
@@ -577,7 +577,7 @@
                 nop
                 $3  '''
         'description': 'To run comparision rs >= 0 then do a PC-relative conditional branch; execute the delay slot only if the branch is taken, and pass the return address into $ra'
-        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
         'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
     'Branch And Link':
         'prefix': 'bal'
@@ -586,7 +586,7 @@
                 nop
             $2      '''
         'description': 'To do an unconditional PC-relative procedure call, and pass the return address into $ra'
-        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
         'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
     'Branch On Greater Than Or Equal To Zero And Link Likely':
         'prefix': 'bgezall'
@@ -595,7 +595,7 @@
                 nop
                 $3  '''
         'description': 'To run comparision rs >= 0 then do a PC-relative conditional branch; execute the delay slot only if the branch is taken, and pass the return address into $ra'
-        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
         'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
     'Branch On Not Equal Likely':
         'prefix': 'bnel'
@@ -604,7 +604,7 @@
                 nop
                 $4  '''
         'description': 'To run comparision rs != 0 then do a PC-relative conditional branch; execute the delay slot only if the branch is taken'
-        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
         'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
 
     # Trapping
@@ -612,31 +612,31 @@
         'prefix': 'teq'
         'body': 'teq ${1:"source == "}, ${2:"source"}'
         'description': 'To run comparision r1 == r2, if true then trap'
-        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
         'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
     'Trap If Equal Immediate':
         'prefix': 'teqi'
         'body': 'teqi ${1:"source == "}, ${2:"value"}'
         'description': 'To run comparision r1 == constant, if true then trap'
-        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
         'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
     'Trap If Greater Than Or Equal To Immediate':
         'prefix': 'tgei'
         'body': 'tgei ${1:"source >= "}, ${2:"value"}'
         'description': 'To run comparision r1 >= constant, if true then trap'
-        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
         'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
     'Trap If Less Than Unsigned':
         'prefix': 'tltu'
         'body': 'tltu ${1:"source < "}, ${2:"source"}'
         'description': 'To run comparision r1 < r2, if true then trap'
-        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
         'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
     'Trap If Greater Or Equal':
         'prefix': 'tge'
         'body': 'tge ${1:"source >="}, ${2:"source"}'
         'description': 'To run comparision r1 >= r2, if true then trap'
-        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
         'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
     'Trap If Less Than Immediate Unsigned':
         'prefix': 'tltiu'
@@ -648,37 +648,37 @@
         'prefix': 'tne'
         'body': 'tne ${1:"source != "}, ${2:"source"}'
         'description': 'To run comparision r1 != r2, if true then trap'
-        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
         'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
     'Trap If Not Equal Immediate':
         'prefix': 'tnei'
         'body': 'tnei ${1:"source != "}, ${2:"value"}'
         'description': 'To run comparision r1 != constant, if true then trap'
-        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
         'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
     'Trap If Greater Or Equal Unsigned':
         'prefix': 'tgeu'
         'body': 'tgeu ${1:"source >= "}, ${2:"source"}'
         'description': 'To run comparision r1 >= r2, if true then trap'
-        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
         'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
     'Trap If Less Than':
         'prefix': 'tlt'
         'body': 'tlt ${1:"source < "}, ${2:"source"}'
         'description': 'To run comparision r1 < r2, if true then trap'
-        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
         'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
     'Trap If Less Than Immediate':
         'prefix': 'tlti'
         'body': 'tlti ${1:"source < "}, ${2:"valu"}'
         'description': 'To run comparision r1 < constant, if true then trap'
-        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
         'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
     'Trap If Greater Or Equal Immediate Unsigned':
         'prefix': 'tgeiu'
         'body': 'tgeiu ${1:"source >="}, ${2:"source"}'
         'description': 'To run comparision r1 >= constant, if true then trap'
-        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
         'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
 
     # Other Commands
@@ -686,35 +686,35 @@
         'prefix': 'neg'
         'body': '${1:"source ="}, ${2:"-1 * source"}'
         'description': 'The value is negated, and place into a register'
-        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
         'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
     'No Operation':
         'prefix': 'nop'
         'body': 'nop'
         'description': 'To perform no operation'
-        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
         'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
     'Break':
         'prefix': 'break'
         'body': 'break'
         'description': 'To cause a Breakpoint exeception'
-        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
         'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
     'Debug Exeception Return':
         'prefix': 'deret'
         'body': 'deret'
         'description': 'To return from a debug exeception'
-        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
         'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
     'System Call':
         'prefix': 'syscall'
         'body': 'syscall'
         'description': 'To cause a system call'
-        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
         'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
     'Exeception Return':
         'prefix': 'eret'
         'body': 'eret'
         'description': 'To return from interrupt, exeception, or error trap'
-        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
         'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
