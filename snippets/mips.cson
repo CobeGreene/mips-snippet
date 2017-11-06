@@ -253,13 +253,13 @@
         'prefix': 'sra'
         'body': 'sra ${1:"dest = "}, ${2:"source >> "}, ${3:"source"}'
         'description': 'To execute an arithmetic right-shift of a word by a fixed number of bits'
-        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
         'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
     'Shift Word Right Arithmetic Variable':
         'prefix': 'srav'
         'body': 'srav ${1:"dest = "}, ${2:"source >> "}, ${3:"source"}'
         'description': 'To execute an arithmetic right-shfit of a word by a variable number of bits'
-        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
         'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
 
 
@@ -310,25 +310,25 @@
         'prefix': 'll'
         'body': 'll ${1:"dest = "}, ${2:"source"}'
         'description': 'To load a word from memory for an atomic read-modify-write'
-        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
         'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
     'Load Word Right':
         'prefix': 'lwr'
         'body': 'lwr ${1:"dest = "}, ${2:"source"}'
         'description': 'To load the least significant part of a word as a signed value from an unaligned memory address'
-        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
         'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
     'Load Word Left':
         'prefix': 'lwl'
         'body': 'lwl ${1:"dest = "}, ${2:"source"}'
         'description': 'To load the most significant part of a word as a signed value from an unaligned memory address'
-        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
         'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
     'Load Upper Immediate':
         'prefix': 'lui'
         'body': 'lui ${1:"dest = "}, ${2:"value"}'
         'description': 'To load a constant into the upper half of the word'
-        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
         'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
 
 
@@ -355,19 +355,19 @@
         'prefix': 'swr'
         'body': 'swr ${1:"source "}, ${2:" = dest"}'
         'description': 'To store the least-significant part of a word to an unaligned memory address'
-        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
         'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
     'Store Conditional Word':
         'prefix': 'sc'
         'body': 'sc ${1:"source "}, ${2:" = dest"}'
         'description': 'To store a word to memory to complete an atomic read-modify-write'
-        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
         'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
     'Store Word Left':
         'prefix': 'swl'
         'body': 'swl ${1:"source"}, ${2:" = dest"}'
         'description': 'To store the most-significant part of a word to an unaligned memory address'
-        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
         'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
 
 
@@ -407,13 +407,13 @@
         'prefix': 'movz'
         'body': 'movz ${1:"dest = "}, ${2:"source"}, ${3:"source == 0"}'
         'description': 'To move r2 to r1 if r3 equals 0'
-        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
         'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
     'Move Conditional On Not Zero':
         'prefix': 'movn'
         'body': 'movn ${1:"dest = "}, ${2:"source"}, ${3:"source != 0"}'
         'description': 'To move r2 to r1 if r3 doesn\'t equal 0'
-        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
         'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
 
     # Conditional
@@ -642,7 +642,7 @@
         'prefix': 'tltiu'
         'body': 'tltiu ${1:"source < "}, ${2:"value"}'
         'description': 'To run comparision r1 < constant, if true then trap'
-        'leftLabelHTML': '<span style="fond-weight: bold; color#038c7d">MIPS</span>'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
         'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
     'Trap If Not Equal':
         'prefix': 'tne'
