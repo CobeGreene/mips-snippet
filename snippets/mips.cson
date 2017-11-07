@@ -291,7 +291,7 @@
     'Load Immediate':
         'prefix': 'li'
         'body': 'li ${1:"dest = "}, ${2:"value"}'
-        'description': ''
+        'description': 'To load a value into the register'
         'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
         'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
     'Load Word':
@@ -303,7 +303,7 @@
     'Load Address':
         'prefix': 'la'
         'body': 'la ${1:"dest = "}, ${2:"source"}'
-        'description': ''
+        'description': 'To load the address of a memory location into the register'
         'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
         'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
     'Load Linked Word':
@@ -376,7 +376,7 @@
     'Move':
         'prefix': 'move'
         'body': 'move ${1:"dest = "}, ${2:"source"}'
-        'description': ''
+        'description': 'To copy the source register into the destination register'
         'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
         'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
     'Move From Hi Register':
@@ -432,7 +432,7 @@
             beqz ${1:"source == 0"}, ${2:"move to label"}
                 nop
                 $3    '''
-        'description': ''
+        'description': 'To run comparision r1 == 0 then do a PC-relative conditional branch'
         'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
         'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
     'Branch If Greater Than Or Equal To Zero':
@@ -513,7 +513,7 @@
             bnez ${1:"source != 0"}, ${2:"move to label"}
                 nop
                 $3 '''
-        'description': ''
+        'description': 'To run comparision rs != 0 then do a PC-relative conditional branch'
         'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
         'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
     'Branch':
@@ -606,6 +606,39 @@
         'description': 'To run comparision rs != 0 then do a PC-relative conditional branch; execute the delay slot only if the branch is taken'
         'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
         'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
+    'Branch On Greater Than Or Equal To':
+        'prefix': 'bge'
+        'body': '''
+            bge ${1:"source >= "}, ${2:"source"}, ${3:"move to label"}
+                nop
+                $4  '''
+        'description': 'To run comparision rs >= rs then do a PC-relative conditional branch; execute the delay slot only if the branch is taken'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+    'Branch On Greater Than':
+        'prefix': 'bgt'
+        'body': '''
+            bgt ${1:"source > "}, ${2:"source"}, ${3:"move to label"}
+                nop
+                $4  '''
+        'description': 'To run comparision rs > rs then do a PC-relative conditional branch; execute the delay slot only if the branch is taken'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+    'Branch On Less Than Or Equal To':
+        'prefix': 'ble'
+        'body': '''
+            ble ${1:"source <= "}, ${2:"source"}, ${3:"move to label"}
+                nop
+                $4  '''
+        'description': 'To run comparision rs <= rs then do a PC-relative conditional branch; execute the delay slot only if the branch is taken'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+    'Branch On Less Than':
+        'prefix': 'blt'
+        'body': '''
+            blt ${1:"source < "}, ${2:"source"}, ${3:"move to label"}
+                nop
+                $4  '''
+        'description': 'To run comparision rs < rs then do a PC-relative conditional branch; execute the delay slot only if the branch is taken'
+        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
+
 
     # Trapping
     'Trap If Equal':
