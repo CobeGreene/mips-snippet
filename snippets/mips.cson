@@ -480,15 +480,6 @@
         'description': 'To run comparision rs < 0 then do a PC-relative conditional branch, and pass the return address into $ra'
         'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
         'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
-    'Branch If Greater Than Or Equal To Zero And Link':
-        'prefix': 'bgezal'
-        'body': '''
-            bgezal ${1:"source >= 0"}, ${2:"move to label"}
-                nop
-                $3    '''
-        'description': 'To run comparision rs >= 0 then do a PC-relative conditional branch, and pass the return address into $ra'
-        'leftLabelHTML': '<span style="font-weight: bold; color:#038c7d">MIPS</span>'
-        'descriptionMoreURL': 'https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf'
     'Branch If Less Than Zero':
         'prefix': 'bltz'
         'body': '''
