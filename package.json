@@ -1,6 +1,6 @@
 {
   "name": "mips-snippets",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "description": "Snippet For Mips Assembly Language",
   "activationCommands": {
     "atom-workspace": "mips-snippets:toggle"
@@ -10,6 +10,5 @@
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
